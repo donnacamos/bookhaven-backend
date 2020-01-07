@@ -1,4 +1,27 @@
 class GenresController < ApplicationController
-    has_many :titles 
-    validates :name, presence: true 
+    def index 
+
+    end 
+ 
+    def create
+ 
+    end 
+ 
+    def show 
+ 
+    end 
+ 
+    def update 
+ 
+    end 
+ 
+    def destroy 
+ 
+    end 
+ 
+    private 
+ 
+    def genre_params
+ 
+    end 
 end

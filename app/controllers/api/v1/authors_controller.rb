@@ -1,4 +1,27 @@
 class AuthorsController < ApplicationController
-    has_many :titles
-    validates :name, presence: true 
+    def index 
+
+    end 
+ 
+    def create
+ 
+    end 
+ 
+    def show 
+ 
+    end 
+ 
+    def update 
+ 
+    end 
+ 
+    def destroy 
+ 
+    end 
+ 
+    private 
+ 
+    def author_params
+ 
+    end  
 end

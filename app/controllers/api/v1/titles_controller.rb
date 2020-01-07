@@ -1,5 +1,28 @@
 class TitlesController < ApplicationController
-    belongs_to :author, :genre 
-    has_many :reviews 
-    validates :name, presence: true 
+   def index 
+
+   end 
+
+   def create
+
+   end 
+
+   def show 
+
+   end 
+
+   def update 
+
+   end 
+
+   def destroy 
+
+   end 
+
+   private 
+
+   def title_params
+
+   end 
+   
 end
