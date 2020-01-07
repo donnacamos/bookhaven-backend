@@ -22,7 +22,7 @@ class TitlesController < ApplicationController
    private 
 
    def title_params
-
+     params.require(:title).permit(:name, :author_id, :genre_id) 
    end 
-   
+
 end
