@@ -1,4 +1,4 @@
 class TitleSerializer < ActiveModel::Serializer 
-    attributes :name, :author_id, :genre_id
+    attributes :name
     has_many :reviews 
 end 
