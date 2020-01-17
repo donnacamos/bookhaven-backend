@@ -1,27 +1,46 @@
 class ReviewsController < ApplicationController
-    def index 
+    before_action :set_book 
 
-    end 
- 
+    def index
+      @reviews = Review.all 
+      render json: @reviews 
+    end
+  
+    def show
+      @reviews = Review.find(params[:id])
+      render json: @review 
+    end
+  
     def create
- 
+      @review = @book.reviews.new(review_params)
+  
+      if @review.save
+        render json: @account
+      else
+        render json: {error: 'error creating review'} 
+      end
+    end
+  
+    def destroy
+        @review = Review.find(params[:id])
+        @review.destroy  
     end 
- 
-    def show 
- 
+
+    def update
+        @review = Review.find(params[:id])
+        @review.update(content: params["review"]["content"])
+        @review.save 
+        render json: @review  
     end 
- 
-    def update 
- 
-    end 
- 
-    def destroy 
- 
-    end 
- 
-    private 
- 
+  
+    private
+  
+    def set_book
+      @book = Book.find(params[:book_id])
+    end
+  
+  
     def review_params
-        params.require(:review).permit(:title_id) 
-    end 
+      params.require(:review).permit(:content, :rating, :book_id)
+    end
 end
