@@ -1,4 +1,4 @@
-class BooksController < ApplicationController
+class Api::V1::BooksController < ApplicationController
     def index 
         @books = Book.all
         render json: @books 
@@ -33,7 +33,7 @@ class BooksController < ApplicationController
     private 
 
     def book_params 
-        params.require(:book).premit(:title, :author, :genre)
+        params.require(:book).premit(:title, :author, :genre, :stars, :review)
     end 
 
 

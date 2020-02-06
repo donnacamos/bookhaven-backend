@@ -1,5 +1,4 @@
 class BookSerializer < ActiveModel::Serializer
-    attributes :title, :author, :genre
-    has_many :reviews
+    attributes :title, :author, :genre, :stars, :reviews 
   
   end

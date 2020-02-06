@@ -6,4 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-books = Book.create(title: 'Lord of the Rings', author: 'J.R.R. Tolkien', genre: 'fantasy')  
+books = Book.create(title: 'The Hobbit', author: 'J.R.R. Tolkien', genre: 'fantasy', stars: 5, review: "One of the greatest fantasy novels of all time!")  
+   
